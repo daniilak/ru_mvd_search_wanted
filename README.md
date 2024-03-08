@@ -40,8 +40,9 @@ Use `with MVDParser()` if you want a context-managed client:
 
 ```python
 
+
 with MVDParser(
-    "Фамилия", "Имя", "Отчество", "YYYY", "MM", "DD", "123455@gmail.com"
+    "Фамилия", "Имя", "Отчество", "YYYY", "MM", "DD", "123455@gmail.com", proxy
 ) as mvd:
     captcha_base64 = mvd.initialize()
 
@@ -76,6 +77,7 @@ Use `async with MVDParserAsync()` Example:
 
 import asyncio
 
+proxy = "user:pass@host:port"
 
 async def main():
     async with MVDParserAsync(
@@ -85,7 +87,8 @@ async def main():
         "YYYY",
         "MM",
         "DD",
-        "123456@gmail.com"
+        "123456@gmail.com",
+        proxy
     ) as mvd:
         captcha_base64 = await mvd.initialize()
 
