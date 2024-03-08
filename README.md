@@ -13,7 +13,7 @@ Requirements:
 -   Python 3.7+
 -   [httpx](https://pypi.org/project/httpx/)
 -   [beautifulsoup4](https://pypi.org/project/beautifulsoup4/)
--   [beautifulsoup4](https://pypi.org/project/fake-useragent/)
+-   [fake-useragent](https://pypi.org/project/fake-useragent/)
 
 ## Installation
 
@@ -103,6 +103,4 @@ async def main():
 
 loop = asyncio.get_event_loop()
 loop.run_until_complete(main())
-
-
-...
+```
