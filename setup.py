@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="ru_mvd_search_wanted",
-    version="0.0.3",
+    version="0.0.4",
     author="Daniil Agniashvili",
     author_email="dortos123456@gmail.com",
     description="Parser of information from the website of the Ministry of Internal Affairs Search",
