@@ -3,7 +3,7 @@ import requests, re
 from bs4 import BeautifulSoup
 from base64 import b64encode
 from ru_mvd_search_wanted.settings import HEADERS, BASE_URL, CAPTCHA_URL, TIMEOUT_SEC
-from exceptions import MVDParserException, MVDParserAPIStatusException
+from ru_mvd_search_wanted.exceptions import MVDParserException, MVDParserAPIStatusException
 
 class MVDParser:
     """
@@ -112,6 +112,8 @@ class MVDParser:
 
         html = BeautifulSoup(response.text, features="lxml")
         results = html.find("div", {"class": "bs-item clearfix"})
+        if not results:
+            return {"result": None}
         image = results.find("img")["src"].strip() if results.find("img") else ""
         fio = results.find("div", {"class": "bs-item-title"}).text
 
