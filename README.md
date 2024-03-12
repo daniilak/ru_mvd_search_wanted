@@ -3,11 +3,6 @@
 
 > Поиск указанного человека в базе данных [Розыск МВД](https://xn--b1aew.xn--p1ai/wanted)
 
-[![Build Status][build-image]][build-url]
-[![Code Coverage][coverage-image]][coverage-url]
-[![Code Quality][quality-image]][quality-url]
-
-
 Requirements:
 
 -   Python 3.7+
