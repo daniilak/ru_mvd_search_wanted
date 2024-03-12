@@ -45,10 +45,7 @@ with MVDParser(
     # captcha_word = solve(captcha_base64)
     result = mvd.get_result(captcha_word)
 
-if "error" in result:
-    print(result["error"])
-else:
-    print(result["result"])
+    print(result)
 
 ```
 
@@ -91,10 +88,7 @@ async def main():
         # captcha_word = await solve(captcha_base64)
         result = await mvd.get_result(captcha_word)
 
-    if "error" in result:
-        print(result["error"])
-    else:
-        print(result["result"])
+        print(result)
 
 loop = asyncio.get_event_loop()
 loop.run_until_complete(main())
