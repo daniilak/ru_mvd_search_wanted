@@ -161,3 +161,5 @@ cython_debug/
 
 # JSON extensions
 *.json
+
+*.db
